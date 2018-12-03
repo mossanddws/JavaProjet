@@ -1,5 +1,6 @@
 package football;
 
+import football.exceptions.JoueurHorsEquipeException;
 import tools.DegreExperience;
 
 public class Arbitre extends Acteur {
@@ -31,5 +32,15 @@ public class Arbitre extends Acteur {
 
     public void setPartie(Partie partie) {
         this.partie = partie;
+    }
+
+    public void validerUnBut(Joueur joueur) {
+
+    }
+
+    public void expulsion(Joueur joueur) throws JoueurHorsEquipeException {
+        if (joueur.getEquipe()==null) {
+            throw new JoueurHorsEquipeException(joueur.getNom());
+        }
     }
 }

@@ -59,4 +59,13 @@ public class Joueur extends Acteur {
     public int hashCode() {
         return Objects.hash(super.hashCode(), club, euroMillons);
     }
+
+    public void marquerUnBut(Partie partie) {
+        if (this.equipe == partie.equipes[0]) {
+            partie.score[0]++;
+        }
+        if (this.equipe == partie.equipes[1]) {
+            partie.score[1]++;
+        }
+    }
 }
