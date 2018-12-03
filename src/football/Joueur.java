@@ -6,6 +6,7 @@ public class Joueur extends Acteur {
 
     String club;
     double euroMillons;
+    Equipe equipe;
 
     public Joueur(String nom, String prenom, int age, double euroMillons) {
         super(nom, prenom, age);
@@ -27,6 +28,10 @@ public class Joueur extends Acteur {
         return club;
     }
 
+    public Equipe getEquipe() {
+        return equipe;
+    }
+
     @Override
     public String toString() {
         return "Joueur{" +
@@ -34,6 +39,7 @@ public class Joueur extends Acteur {
                 ", prenom='" + getPrenom() + '\'' +
                 ", age=" + getAge() + '\'' +
                 ", club='" + club + '\'' +
+                ", equipe='" + equipe + '\'' +
                 ", euroMillons=" + euroMillons + '\'' +
                 ", salaire=" + getSalaire() +
                 '}';
