@@ -11,6 +11,6 @@ public class JoueurHorsClubEquipeException extends Exception {
 
     @Override
     public String getMessage() {
-        return "JJudas que viens tu faire dans notre équipe? Tu ne fais pas partie de notre club! Ton club est " + club1 + " et le nôtre est " + club2 + ", va à Knysna si tu veux mais pas chez nous, sale traître!";
+        return "Judas que viens tu faire dans notre équipe? Tu ne fais pas partie de notre club! Ton club est " + club1 + " et le nôtre est " + club2 + ", va à Knysna si tu veux mais pas chez nous, sale traître!";
     }
 }

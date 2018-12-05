@@ -14,6 +14,7 @@ public class Arbitre extends Acteur {
 
     public Arbitre(String nom, String prenom, int age, DegreExperience degreExperience) {
         super(nom, prenom, age);
+        this.degreExperience = degreExperience;
     }
 
     @Override

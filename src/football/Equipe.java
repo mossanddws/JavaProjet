@@ -23,9 +23,9 @@ public class Equipe {
     @Override
     public String toString() {
         return "Equipe{" +
-                "\nclub='" + club + '\'' +
-                ", \njoueurs=" + joueurs +
-                "\n}";
+                "club='" + club + '\'' +
+                ", joueurs=" + joueurs +
+                '}';
     }
 
     public void add(Joueur joueur) throws EquipePleineException, JoueurHorsClubEquipeException {
