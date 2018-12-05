@@ -2,7 +2,7 @@ package football;
 
 import java.util.Objects;
 
-public abstract class Acteur {
+public abstract class Acteur implements Comparable{
     private final String nom;
     private final String prenom;
     private int age;

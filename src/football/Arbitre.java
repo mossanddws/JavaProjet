@@ -17,6 +17,11 @@ public class Arbitre extends Acteur {
     }
 
     @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
+
+    @Override
     public double getSalaire() {
         switch (degreExperience) {
             case EXPERT:

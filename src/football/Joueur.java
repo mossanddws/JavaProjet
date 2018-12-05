@@ -56,6 +56,11 @@ public class Joueur extends Acteur {
     }
 
     @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), club, euroMillons);
     }
@@ -68,4 +73,5 @@ public class Joueur extends Acteur {
             partie.score[1]++;
         }
     }
+
 }

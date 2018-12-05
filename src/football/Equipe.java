@@ -6,15 +6,17 @@ import football.exceptions.JoueurHorsClubEquipeException;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Equipe {
     public final int NOMBREJOUEURS = 11;
     private String club;
-    List<Acteur> acteurs;
+    Set<Joueur> joueurs;
 
     public Equipe(String club) {
         this.club = club;
-        acteurs = new ArrayList<>();
+        joueurs = new TreeSet<>();
     }
 
     public String getClub() {
@@ -24,14 +26,14 @@ public class Equipe {
     @Override
     public String toString() {
         return "Equipe{" +
-                "club='" + club + '\'' +
-                ", acteurs=" + acteurs +
-                '}';
+                "\nclub='" + club + '\'' +
+                ", \njoueurs=" + joueurs +
+                "\n}";
     }
 
     public void add(Joueur joueur) throws EquipePleineException, JoueurHorsClubEquipeException {
-        if (acteurs.size() < 11) {
-            acteurs.add(joueur);
+        if (joueurs.size() < 11) {
+            joueurs.add(joueur);
         } else {
             throw new EquipePleineException();
         }
