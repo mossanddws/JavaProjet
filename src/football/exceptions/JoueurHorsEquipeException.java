@@ -10,6 +10,6 @@ public class JoueurHorsEquipeException extends Exception {
 
     @Override
     public String getMessage() {
-        return nom+"ne fait pas partie de l'équipe!";
+        return nom + "ne fait pas partie de l'équipe!";
     }
 }

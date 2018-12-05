@@ -25,11 +25,11 @@ public class Arbitre extends Acteur {
     public double getSalaire() {
         switch (degreExperience) {
             case EXPERT:
-                return 1;
+                return Math.random() * 0.1 * 100000 * 1;
             case CONFIRME:
-                return 2;
+                return Math.random() * 0.1 * 100000 * 2;
             case DEBUTANT:
-                return 3;
+                return Math.random() * 0.1 * 100000 * 3;
             default:
                 return 0;
         }
@@ -44,7 +44,7 @@ public class Arbitre extends Acteur {
     }
 
     public void expulsion(Joueur joueur) throws JoueurHorsEquipeException {
-        if (joueur.getEquipe()==null) {
+        if (joueur.getEquipe() == null) {
             throw new JoueurHorsEquipeException(joueur.getNom());
         }
     }

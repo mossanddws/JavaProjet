@@ -1,11 +1,8 @@
 package football;
 
-
 import football.exceptions.EquipePleineException;
 import football.exceptions.JoueurHorsClubEquipeException;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
