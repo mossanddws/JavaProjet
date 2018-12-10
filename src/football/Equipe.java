@@ -35,7 +35,7 @@ public class Equipe {
             throw new EquipePleineException();
         }
         if (joueur.getClub() != this.club) {
-            throw new JoueurHorsClubEquipeException(joueur.getClub(), this.club);
+            throw new JoueurHorsClubEquipeException(joueur, this.club);
         }
     }
 }
