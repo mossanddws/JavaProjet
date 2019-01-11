@@ -6,12 +6,14 @@ public class Joueur extends Acteur {
 
     String club;
     double euroMillons;
-    Equipe equipe;
+    private Equipe equipe;
+    private final double salaire;
 
     public Joueur(String nom, String prenom, int age, double euroMillons) {
         super(nom, prenom, age);
         this.euroMillons = euroMillons;
         this.club = "Football Syndrome Club";
+        salaire = Math.random() * euroMillons * 1000000;
     }
 
     public Joueur(String nom, String prenom, int age, String club, double euroMillons) {
@@ -21,7 +23,7 @@ public class Joueur extends Acteur {
 
     @Override
     public double getSalaire() {
-        return Math.random() * euroMillons;
+        return salaire;
     }
 
     public String getClub() {
@@ -32,6 +34,14 @@ public class Joueur extends Acteur {
         return equipe;
     }
 
+    public void setEquipe(Equipe equipe) {
+        if (equipe != null) {
+            this.equipe = new Equipe(equipe.getClub());
+        } else {
+            this.equipe = new Equipe("");
+        }
+    }
+
     @Override
     public String toString() {
         return "Joueur{" +
@@ -39,7 +49,7 @@ public class Joueur extends Acteur {
                 ", prenom='" + getPrenom() + '\'' +
                 ", age=" + getAge() + '\'' +
                 ", club='" + club + '\'' +
-                ", equipe='" + equipe + '\'' +
+                ", equipe(club)='" + equipe.getClub() + '\'' +
                 ", euroMillons=" + euroMillons + '\'' +
                 ", salaire=" + getSalaire() +
                 '}';
@@ -57,7 +67,7 @@ public class Joueur extends Acteur {
 
     @Override
     public int compareTo(Object o) {
-        return 0;
+        return super.compareTo(o);
     }
 
     @Override
@@ -66,12 +76,12 @@ public class Joueur extends Acteur {
     }
 
     public void marquerUnBut(Partie partie) {
-        if (this.equipe == partie.equipes[0]) {
+        /*if (this.equipe.getClub() == partie.equipes[0].getClub()) {
             partie.score[0]++;
         }
-        if (this.equipe == partie.equipes[1]) {
+        if (this.equipe.getClub() == partie.equipes[1].getClub()) {
             partie.score[1]++;
-        }
+        }*/
     }
 
 }

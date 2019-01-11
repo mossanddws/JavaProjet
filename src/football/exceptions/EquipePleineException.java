@@ -6,6 +6,6 @@ public class EquipePleineException extends Exception {
 
     @Override
     public String getMessage() {
-        return "Les 12 apÃ´tres ne jouaient pas au football!";
+        return "Les 12 apôtres ne jouaient pas au football!";
     }
 }

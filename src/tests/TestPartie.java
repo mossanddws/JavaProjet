@@ -23,6 +23,7 @@ public class TestPartie {
 		try {
 			galactique.add(diStefano);
 			galactique.add(puskas);
+
 			galactique.add(albert);
 			galactique.add(judas);
 		} catch (EquipePleineException e) {
