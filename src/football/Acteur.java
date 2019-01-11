@@ -52,6 +52,18 @@ public abstract class Acteur implements Comparable {
     }
 
     @Override
+    public int compareTo(Object o) {
+        Acteur acteur = (Acteur) o;
+        if (acteur.getSalaire() > this.getSalaire()) {
+            return 1;
+        } else if (acteur.getSalaire() < this.getSalaire()) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(nom, prenom, age);
     }

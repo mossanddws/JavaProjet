@@ -16,6 +16,10 @@ public class Equipe {
         joueurs = new TreeSet<>();
     }
 
+    public void setClub(String club) {
+        this.club = club;
+    }
+
     public String getClub() {
         return club;
     }
@@ -28,14 +32,19 @@ public class Equipe {
                 '}';
     }
 
+    public Set<Joueur> getJoueurs() {
+        return joueurs;
+    }
+
     public void add(Joueur joueur) throws EquipePleineException, JoueurHorsClubEquipeException {
+        if (joueur.getClub() != this.club) {
+            throw new JoueurHorsClubEquipeException(joueur, this.club);
+        }
         if (joueurs.size() < 11) {
             joueurs.add(joueur);
+            joueur.setEquipe(this);
         } else {
             throw new EquipePleineException();
-        }
-        if (joueur.getClub() != this.club) {
-            throw new JoueurHorsClubEquipeException(joueur.getClub(), this.club);
         }
     }
 }

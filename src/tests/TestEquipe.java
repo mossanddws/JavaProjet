@@ -1,4 +1,4 @@
-package test;
+package tests;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,10 +14,9 @@ public class TestEquipe {
         Joueur diStefano = new Joueur("Di Stefano", "Alfredo", 32, "Knysna Syndrome Club", 200);
         Joueur puskas = new Joueur("Puskas", "Ferenc", 29, "Knysna Syndrome Club", 150);
         Joueur albert = new Joueur("Albert", "Florian", 26, "Knysna Syndrome Club", 80);
-        Joueur judas = new Joueur("Judas", "Iscariote", 31, "Les 12 Apï¿½tres", 0);
+        Joueur judas = new Joueur("Judas", "Iscariote", 31, "Les 12 Apôtres", 0);
 
         Equipe galactique = new Equipe("Knysna Syndrome Club");
-
         try {
             galactique.add(diStefano);
             galactique.add(puskas);
@@ -41,13 +40,13 @@ public class TestEquipe {
             }
 
         if (diStefano.getEquipe() != null)
-            System.out.println(diStefano.getNom() + " appartient ï¿½ l'ï¿½quipe " + diStefano.getEquipe().getClub());
+            System.out.println(diStefano.getNom() + " appartient à l'équipe " + diStefano.getEquipe().getClub());
         else
-            System.out.println(diStefano.getNom() + " n'appartient ï¿½ aucune ï¿½quipe!");
+            System.out.println(diStefano.getNom() + " n'appartient à aucune équipe!");
 
         if (judas.getEquipe() != null)
-            System.out.println(judas.getNom() + " appartient ï¿½ l'ï¿½quipe " + judas.getEquipe().getClub());
+            System.out.println(judas.getNom() + " appartient à l'équipe " + judas.getEquipe().getClub());
         else
-            System.out.println(judas.getNom() + " n'appartient ï¿½ aucune ï¿½quipe!");
+            System.out.println(judas.getNom() + " n'appartient à aucune équipe!");
     }
 }
